@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <rel link="stylesheet" href="index1.css"></rel>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Ishant Consultancy-A Key to Success</title>
+    <style>
+      body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: inherit;
+      display: block;
+      flex-wrap: wrap;
+  }
+  header.header1{
+  height:30px;
+  align-content: center;
+}
+.header1 {
+    background-color: antiquewhite;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 0;
+    color: black;
+    width: 100%;
+}
+
+a.email {
+    color: black;
+    font-size: 1.5vw; /* Using vw (viewport width) for font size */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a.email:hover {
+    color: #e1ad01;
+}
+
+.fas {
+    color: black;
+    font-style: italic;
+    font-weight: 900;
+}
+
+i.fas.fa-map-marker-alt {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    font-size: 1.5vw; /* Using vw (viewport width) for font size */
+}
+@media screen and (min-width: 768px) {
+  
+
+    a.email,
+    i.fas.fa-map-marker-alt {
+        font-size: 1.4vw; /* Using vw (viewport width) for font size */
+    }
+}
+
+.header2 {
+    background-color: black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: visible;
+    height: auto;
+    }
+
+/* Styles for the logo */
+.header2 img {
+    width:max-content;
+    max-width: 40%;
+    height: auto;
+    top: 0;
+}
+.full-width-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw; /* Sets the width of the image to span the entire viewport width */
+        z-index: -1; /* Places the image behind other header content */
+    }
+
+
+header.header2 li a{
+    color:#e1ad01;
+    text-decoration: none;
+}
+
+/* Styles for the navigation */
+/* General styles for the navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    padding-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 25px; /* Adjust margin as needed */
+    font-size: 25px;
+    flex-wrap: wrap;
+    padding: 10px;
+    color: aliceblue;
+}
+
+/* Styles for the navigation links */
+.navlist li a:hover {
+    color: white;
+}
+.navlist{
+    color: aliceblue;
+}
+.menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color:#e1ad01;
+      margin: 3px 0;
+      transition: transform 0.4s ease-in-out;
+    }
+@media (max-width: 800px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: relative;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        line-height: 1px;
+      }
+    }
+
+/* Zoom effect on hover */
+.zoom-element {
+    transition: transform 0.3s;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.zoom-element:hover {
+    transform: scale(1.1);
+}
+
+.zoom-element li a{
+  font-family:'Poppins', sans-serif;
+  font-weight: 100;
+  }
+/* Styles for links */
+a:-webkit-any-link {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+main{
+    display: inline;
+    transition: smooth ;
+}
+
+.header2.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+        /* Boxes Container */
+        .boxes-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-top:20px;
+            margin-bottom: 20px;
+        }
+
+        /* Individual Box Styles */
+        .box {
+            position: relative;
+            width: 400px; /* Adjust width as needed */
+            overflow: hidden;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .box:hover {
+            transform: scale(1.1); /* Scale the box on hover */
+        }
+
+        /* Image Styles */
+        .image {
+            text-align: center;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        /* Image Overlay */
+        .image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Content Styles */
+        .content {
+            padding: 10px;
+            text-align: center;
+        }
+        .content p a{
+          text-decoration: none;
+          color:black ;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
+          
+        }
+        .content p{
+          padding-bottom: 7px;
+
+        }
+
+        /* Full-width Button */
+        .full-width-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #e1ad01;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            
+            
+        }
+        a.full-width-btn{
+          font-family:'Poppins', sans-serif ;
+          font-weight: 500;
+
+        }
+        /* For screens 768px and below */
+@media only screen and (max-width: 768px) {
+    .boxes-container {
+        gap: 15px; /* Adjust the gap between boxes for smaller screens */
+    }
+
+    .box {
+        width: 100%; /* Make the box full width on smaller screens */
+    }
+}
+
+/* For screens 1024px and below */
+@media only screen and (max-width: 1024px) {
+    .box {
+        width: 48%; /* Adjust width for medium-sized screens */
+    }
+}
+
+#rs-footer {
+  background-color: black;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: inherit;
+  max-width: inherit;
+  position: relative;
+  bottom: 0;
+  min-height: 80px; /* Adjust minimum height as needed */
+}
+.right-part{
+  display: flex;
+  align-content: space-evenly;
+}
+#p{
+  font-family: 'Poppins', sans-serif;
+}
+#rs-footer .left-part,
+#rs-footer .right-part {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#rs-footer img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin-right: 20px; /* Adjust spacing between image and content */
+}
+
+.contact {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column; /* Ensure contact details stack on smaller screens */
+}
+
+.contact-con {
+  color: aliceblue;
+  font-size: 16px; /* Adjust font size for better readability */
+}
+
+.contact-con ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-con ul li {
+  margin-bottom: 5px; /* Add spacing between contact details */
+  color: white;
+}
+.Popular-Links{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.right-left-footer{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.Popular-Links ul{
+  margin-top: 1.5px;
+}
+.Popular-Links ul a{
+
+  line-height: 2.5;
+  color: white;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+  #rs-footer .left-part,
+  #rs-footer .right-part {
+      flex: 1 1 100%;
+      text-align: center; /* Center align content on smaller screens */
+  }
+
+  #rs-footer img {
+      margin-right: 0; /* Remove margin for better mobile view */
+      margin-bottom: 10px; /* Add space below the image */
+  }
+
+  .contact {
+      text-align: center;
+  }
+}
+/* For mobile devices */
+@media only screen and (max-width: 1000px) {
+  .right-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact,
+  .Popular-Links {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-con,
+  .Popular-Links {
+    margin-top: 10px;
+  }
+}
+
+.whatsapp-icon {
+      position: fixed;
+      bottom: 50%; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 9999; /* Ensure it's above other elements if necessary */
+    }
+
+    .whatsapp-icon a img {
+      width: 50px; /* Adjust the size of the icon */
+      height: auto;
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header class ="header1">
+        <ul><a href="mailto:info@ishantadmissions.in" class="email">&#128231;  info@ishantadmissions.in  | </a>
+            <a href="#location"><i class="fas fa-map-marker-alt"> &nbsp; Gola Road, Behind LIC office Ramgarh, Jharkhand</i></a></ul>
+    </header>
+    
+    <header class = "header2">
+        <img src="images/logo11.jpg" alt="Education Consultancy Logo">
+    
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        <nav>
+            <ul class="navlist">
+                <div class="zoom-element">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About&nbsp;Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </div>
+            </ul>
+    </nav>
+    </header>
+    
+    <div class="boxes-container">
+        <!-- Box 1 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/MBA.jpg" alt="Management">
+            </div>
+            <div class="content">
+                <p>MANAGEMENT</p>
+                <a href="management.html" class="full-width-btn">Know more</a>
+            </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/NURSING.jpg" alt="NURSING">
+            </div>
+            <div class="content">
+                <p>NURSING</p>
+                <a href="nursing.html" class="full-width-btn">Know more</a>
+                </div>
+            
+        </div>
+
+        <!-- Box 3 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/commerce.jpg" alt="COMMERCE">
+            </div>
+            <div class="content">
+                <p>COMMERCE</p>
+                <a href="commerce.html" class="full-width-btn">Know more</a>
+                </div>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/LAW.jpg" alt="LAW">
+            </div>
+            <div class="content">
+                <p>LAW</p>
+                <a href="law.html" class="full-width-btn">Know more</a>
+                </div>
+        </div>
+
+        <!-- Box 5 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/BTECH.jpg" alt="B.TECH">
+            </div>
+            <div class="content">
+                <p>B.TECH</p>
+                <a href="btech.html" class="full-width-btn">Know more</a> </div>
+            
+        </div>
+
+        <!-- Box 6 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/COMP_APP.jpg" alt="COMPUTER APPLICATION">
+            </div>
+            <div class="content">
+                <p>COMPUTER APPLICATIONS</p>
+                <a href="computerapp.html" class="full-width-btn">Know more</a>
+                </div>
+        </div>
+
+        <!-- Box 7 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/SCIENCE.jpg" alt="SCIENCE">
+            </div>
+            <div class="content">
+                <p>SCIENCE</p>
+                <a href="science.html" class="full-width-btn">Know more</a>
+                </div>
+        </div>
+        
+
+        <!-- Box 8 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/ARTS11.jpg" alt="ARTS">
+            </div>
+            <div class="content">
+                <p>ARTS</p>
+                <a href="arts.html" class="full-width-btn">Know more</a>
+                </div>
+        </div>
+        
+        <!-- Box 9 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/HOT_MAN.jpg" alt="HOTEL MANAGEMENT">
+            </div>
+            <div class="content">
+                <p>HOTEL MANAGEMENT</p>
+                <a href="hotel.html" class="full-width-btn">Know more</a>
+                </div>
+        </div>
+        <!-- Box 10 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/BED.jpg" alt="B.ED">
+            </div>
+            <div class="content">
+                <p>B.ED/M.ED/B.PED</p>
+                <a href="teach.html" class="full-width-btn">Know more</a>
+                </div>
+        </div>
+        <!-- Box 11 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/POL.jpg" alt="POLYTECHNIC">
+            </div>
+            <div class="content">
+                <p>POLYTECHNIC/ITI</p>
+                <a href="poly.html" class="full-width-btn">Know more</a>
+                </div>
+        </div>
+        <!-- Box 12 -->
+        <div class="box">
+            <div class="image">
+                <img src="images/PHD.jpg" alt="PHD">
+            </div>
+            <div class="content">
+                <p>PHD</p>
+                <a href="phd.html" class="full-width-btn">Know more</a>
+                </div>
+        </div>
+
+        <!-- Add more boxes if needed -->
+    </div>
+    <div class="whatsapp-icon">
+      <a href="https://api.whatsapp.com/send?phone=9241293092" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+      </a>
+    </div>
+    <footer id="rs-footer">
+      <div class="left-part">
+        <img src="images/logo1.jpg">
+      </div>
+      <div class="right-part">
+          <div class="contact">
+              <div class ='right-left-footer'>
+              <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Contact us</h1>
+              <div class="contact-con">
+                  <ul>
+                  <ul><p>Gola Road, Behind LIC office Ramgarh, Jharkhand</p></ul>
+                  <ul><p>info@ishantadmissions.in</p></ul>
+                  <ul><p>9241293092</p></ul>
+              </ul>
+              </div>
+          </div>
+          </div>
+          <div class = 'right-right-footer'>
+          <div class="Popular-Links">
+              <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Popular&#160;Links</h1>
+              <div class="contact-con">
+                  <ul>
+                    <ul><a href="about.html">About us</a></ul>
+                    <ul><a href="courses.html">Courses</a></ul>
+                    <ul><a href="contact.html">Contact</a></ul>
+              </ul>
+          </div>
+            
+          </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        function toggleMenu() {
+          const menu = document.querySelector('nav ul');
+          menu.classList.toggle('active');
+        }
+        $('#selectionInput').on('change', function() {
+  var selectedOption = $(this).find(':selected');
+  var url = selectedOption.data('href');
+  if (url !== undefined && url !== null) {
+      window.location.href = url;
+  }
+});
+      </script>
+</body>
+</html>
+

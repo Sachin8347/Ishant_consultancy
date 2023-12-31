@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Ishant Consultancy-A Key to Success</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: inherit;
+    display: block;
+    flex-wrap: wrap;
+    
+}
+header.header1{
+  height:30px;
+  align-content: center;
+}
+.header1 {
+    background-color: antiquewhite;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 0;
+    color: black;
+    width: 100%;
+}
+
+a.email {
+    color: black;
+    font-size: 1.5vw; /* Using vw (viewport width) for font size */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a.email:hover {
+    color: #e1ad01;
+}
+
+.fas {
+    color: black;
+    font-style: italic;
+    font-weight: 900;
+}
+
+i.fas.fa-map-marker-alt {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    font-size: 1.5vw; /* Using vw (viewport width) for font size */
+}
+@media screen and (min-width: 768px) {
+  
+
+    a.email,
+    i.fas.fa-map-marker-alt {
+        font-size: 1.4vw; /* Using vw (viewport width) for font size */
+    }
+}
+
+.header2 {
+    background-color: black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: visible;
+    height: auto;
+    }
+
+/* Styles for the logo */
+.header2 img {
+    width:max-content;
+    max-width: 40%;
+    height: auto;
+    top: 0;
+}
+.full-width-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw; /* Sets the width of the image to span the entire viewport width */
+        z-index: -1; /* Places the image behind other header content */
+    }
+
+
+header.header2 li a{
+    color:#e1ad01;
+    text-decoration: none;
+}
+
+/* Styles for the navigation */
+/* General styles for the navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    padding-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 25px; /* Adjust margin as needed */
+    font-size: 25px;
+    flex-wrap: wrap;
+    padding: 10px;
+    color: aliceblue;
+}
+
+/* Styles for the navigation links */
+.navlist li a:hover {
+    color: white;
+}
+.navlist{
+    color: aliceblue;
+}
+.menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color:#e1ad01;
+      margin: 3px 0;
+      transition: transform 0.4s ease-in-out;
+    }
+@media (max-width: 800px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: relative;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        line-height: 1px;
+      }
+    }
+
+/* Zoom effect on hover */
+.zoom-element {
+    transition: transform 0.3s;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.zoom-element:hover {
+    transform: scale(1.1);
+}
+
+.zoom-element li a{
+  font-family:'Poppins', sans-serif;
+  font-weight: 100;
+  }
+/* Styles for links */
+a:-webkit-any-link {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+main{
+    display: inline;
+    transition: smooth ;
+}
+
+.header2.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.navlist.active{
+        
+    
+}
+/*--------------------------HEADER ENDS-----------------------------*/
+.section00{
+  background-color: #e1ad01;
+  height: 30vh;
+  justify-content: center;
+  display: flex;
+  align-content: center;
+
+}
+.content00 {
+  align-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.selection-container {
+  text-align: center;
+  margin-top: 20px;
+  width:165vh;
+  border-radius: 15px;
+}
+
+select {
+  padding: 8px;
+  margin-right: 10px;
+}
+#selectionInput{
+    width: 70%;
+    border-radius: 15px;
+    height: 50px;
+}
+@media screen and (max-width: 900px) {
+  .selection-container {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 10px auto; /* Center align on smaller screens */
+  }
+
+  #selectionInput {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+  
+  /* Additional adjustments for select elements or other components */
+  /* For example: */
+  select {
+    width: 100%; /* Make select elements full width */
+    margin: 5px 0; /* Adjust margins */
+  }
+}
+
+/* -----------------section0--------------------- */
+.content0 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.text0 {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #000; /* Adding a border around the box */
+  padding: 20px; /* Adding some padding inside the box */
+  background-color: #e1ad01;
+  height:300px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 12px;
+  overflow:hidden;
+  border-radius: 15px; /* Adjust the radius to change the roundness of the edges */
+  
+
+}
+.resp {
+  font-size: 24px; /* Set a base font size */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .resp {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+  .resp {
+    font-size: 12px; /* Adjust font size for even smaller screens */
+  }
+}
+
+
+.image0 {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+   /* Align image in the center */
+}
+
+img {
+  max-width: 100%; /* Ensure image stays within its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/*----------------section1---------*/
+.content1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.text1 {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #000; /* Adding a border around the box */
+  padding: 20px; /* Adding some padding inside the box */
+  background-color: #e1ad01;
+  height:300px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 12px;
+  border-radius: 15px; /* Adjust the radius to change the roundness of the edges */
+  overflow:hidden;
+
+}
+.approach {
+  font-size: 24px; /* Set a base font size */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .approach {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+  .approach {
+    font-size: 12px; /* Adjust font size for even smaller screens */
+  }
+}
+
+
+.image0 {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+   /* Align image in the center */
+}
+
+img {
+  max-width: 100%; /* Ensure image stays within its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+/*----------SECTION-BOXES---------*/
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for the boxes */
+    gap: 20px; /* Adjusts the gap between boxes */
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 0 20px;/* Padding around the container */
+    height: 100px;
+    margin-left: 8%;
+    margin-top: 10px;
+  }
+ 
+  
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    border: 2px solid #2980b9;
+    box-sizing:content-box;
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    color: white;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Change to one column for smaller screens */
+        justify-content: center; /* Center boxes when in one column */
+    }
+    
+    .box {
+        width: 100%; /* Make the boxes take full width of the container */
+        height: auto; /* Let the height adjust according to content */
+    }
+}
+.main-container {
+    display: flex; /* Or use display: grid; */
+    flex-direction: column; /* Or adjust according to your layout */
+    /* Additional styles for the container */
+}
+/*--------------ADMISSION PROCESS-----------------*/
+/* General styles */
+/* General styles */
+.section2 {
+  margin: 50px;
+  background-color: white;
+}
+
+.admission-process {
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.admission-process .section-title {
+  font-size: 2.5rem;
+  color: black;
+  padding-left: 19px; /* Moved from .section-title */
+}
+
+.admission-process p {
+  color: black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-lg-5 {
+  flex: 0 0 calc(40% - 20px); /* Adjust width as needed */
+  margin-right: 20px;
+}
+
+.col-lg-7 {
+  flex: 0 0 calc(60% - 20px); /* Adjust width as needed */
+  margin-left: 20px;
+}
+
+.row.g-5 {
+  padding-top: 10%;
+  background-color: white;
+  justify-content: center;
+}
+
+/* Styling for the process steps */
+.process-list {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border: 1px solid #ccccccee; /* Border styling for the box */
+  padding: 20px; /* Padding for the box */
+  border-radius: 15px;
+  position: relative;
+  background-color: #e1ad01;
+  animation: fadeIn 0.5s ease forwards;
+  transition: transform 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .process-list {
+    flex-direction: column; /* Change the direction to column for smaller screens */
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+    width: auto; /* Set width to auto for stacking */
+  }
+  
+  .process-list:hover {
+    transform: none; /* Remove hover effect on smaller screens */
+  }
+
+  .number {
+    margin-right: 0; /* Remove margin for number on smaller screens */
+    margin-bottom: 10px; /* Adjust spacing for smaller screens */
+  }
+  
+  .process-title {
+    margin-left: 0; /* Adjust title margin for smaller screens */
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Remove step-style arrangement for smaller screens */
+@media screen and (min-width: 769px) {
+  .process-list:nth-child(1) {
+    bottom: 0;
+    right: 0;
+    animation: zoomIn 0.5s ease forwards 0.2s;
+  }
+
+  .process-list:nth-child(2) {
+    bottom: 40px;
+    right: 40px;
+    animation: zoomIn 0.5s ease forwards 0.4s;
+  }
+
+  .process-list:nth-child(3) {
+    bottom: 80px;
+    right: 80px;
+    animation: zoomIn 0.5s ease forwards 0.6s;
+  }
+
+  .process-list:nth-child(4) {
+    bottom: 120px;
+    right: 120px;
+    animation: zoomIn 0.5s ease forwards 0.8s;
+  }
+}
+
+.number {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.process-content {
+  flex: 1;
+}
+
+.process-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Styling for the 'Get Started Now' button */
+.primary-btn {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e1ad01;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-radius: 15px;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.primary-btn:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.6s ease-out;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.primary-btn:hover:before {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.primary-btn:active:before {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.primary-btn:after {
+  content: "";
+  background: linear-gradient(45deg, #fff, #f1f1f1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  transition: all 0.8s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.primary-btn:active:after {
+  opacity: 1;
+  height: 100%;
+  transition: 0s;
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Animation for the process boxes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Additional styles */
+#text {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  margin: 25px;
+  border-left: 5px;
+}
+
+  /*-----------------section-3-----------------*/
+  
+  .section3 {
+    width: 100%;
+    height: auto;
+    background-color:white;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1px;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 0 auto; /* Centering the container */
+    max-width: 1200px; /* Limiting container width */
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.box2 {
+    width: 250px; /* Adjusting box width for responsiveness */
+    height: 250px; /* Modified height for responsiveness */
+    margin: 10px; /* Increased margin for better spacing */
+    background-color: white;
+    border-radius: 20px;
+    animation: box2Animation 2s infinite alternate;
+    text-align: center;
+    background-color: #e1ad01;
+  
+}
+
+.circle {
+    height: 250px; /* Adjusted height for circle */
+    width: 250px; /* Adjusted width for circle */
+    border-radius: 50%; /* Changed border-radius for a perfect circle */
+    background-color:black;
+    z-index: 1;
+    margin: 10px; /* Increased margin for better spacing */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f7f7f7;
+    font-size: 40px;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .box2 {
+        width: calc(50% - 20px); /* Adjusting box width for smaller screens */
+        height: 200px; /* Modified height for smaller screens */
+    }
+
+    .circle {
+        height: 200px; /* Adjusted height for circle in smaller screens */
+        width: 200px; /* Adjusted width for circle in smaller screens */
+    }
+}
+
+
+/* -------------------FOOTER---------------------- */
+#rs-footer {
+  background-color: black;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: inherit;
+  max-width: inherit;
+  position: relative;
+  bottom: 0;  
+  min-height: 80px; /* Adjust minimum height as needed */
+}
+.right-part{
+  display: flex;
+  align-content: space-evenly;
+  justify-content: center;
+}
+#p{
+  font-family: 'Poppins', sans-serif;
+}
+#rs-footer .left-part,
+#rs-footer .right-part {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#rs-footer img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin-right: 20px; /* Adjust spacing between image and content */
+}
+
+.contact {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column; /* Ensure contact details stack on smaller screens */
+}
+
+.contact-con {
+  color: aliceblue;
+  font-size: 16px; /* Adjust font size for better readability */
+}
+
+.contact-con ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-con ul li {
+  margin-bottom: 5px; /* Add spacing between contact details */
+  color: white;
+}
+.Popular-Links{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.right-left-footer{
+  margin-top: 35px;
+  line-height: 1.5;
+
+}
+.right-left-footer{
+  margin-top: 35px;
+  line-height: 1.5;
+  
+}
+.Popular-Links ul{
+  margin-top: 1.5px;
+}
+.Popular-Links ul a{
+
+  line-height: 2.5;
+  color: white;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+  #rs-footer .left-part,
+  #rs-footer .right-part {
+      flex: 1 1 100%;
+      text-align: center; /* Center align content on smaller screens */
+  }
+
+  #rs-footer img {
+      margin-right: 0; /* Remove margin for better mobile view */
+      margin-bottom: 10px; /* Add space below the image */
+  }
+
+  .contact {
+      text-align: center;
+  }
+}
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+  .right-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact,
+  .Popular-Links {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-con,
+  .Popular-Links {
+    margin-top: 10px;
+  }
+}
+
+.whatsapp-icon {
+      position: fixed;
+      bottom: 50%; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 9999; /* Ensure it's above other elements if necessary */
+    }
+
+    .whatsapp-icon a img {
+      width: 50px; /* Adjust the size of the icon */
+      height: auto;
+    }
+    </style>
+</head>
+<body>
+    <header class ="header1">
+        <ul><a href="mailto:info@ishantadmissions.in" class="email">&#128231;  info@ishantadmissions.in  | </a>
+            <a href="#location"><i class="fas fa-map-marker-alt"> &nbsp; Gola Road, Behind LIC office Ramgarh, Jharkhand</i></a></ul>
+    </header>
+
+    <header class = "header2">
+        <img src="images/logo11.jpg" alt="Education Consultancy Logo">
+    
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        <nav>
+            <ul class="navlist">
+                <div class="zoom-element">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About&nbsp;Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </div>
+            </ul>
+    </nav>
+    </header>
+    
+    
+<section class="body">
+    <section class = "section00">
+        <div class="content00">
+            <div class="selection-container">
+                <select id="selectionInput">
+                  <option value="all">Select the course you wanna know more about....</option>
+                  <option value="option1" data-href="management.html">MANAGEMENT</option>
+                  <option value="option2" data-href="nursing.html">NURSING</option>
+                  <option value="option3" data-href="commerce.html">COMMERCE</option>
+                  <option value="option4" data-href="law.html">LAW</option>
+                  <option value="option5" data-href="btech.html">B.TECH</option>
+                  <option value="option6" data-href="computerapp.html">COMPUTER APPLICATION</option>
+                  <option value="option7" data-href="science.html">SCIENCE</option>
+                  <option value="option8" data-href="arts.html">ARTS</option>
+                  <option value="option9" data-href="hotel.html">HOTEL MANAGEMENT</option>
+                  <option value="option10" data-href="teach.html">B.ED/M.ED/B.P.ED</option>
+                  <option value="option11" data-href="poly.html">POLYTECHNIC/ITI</option>
+                  <option value="option12" data-href="phd.html">PHD</option>
+            
+                </select>
+
+              </div>
+        </div>
+        
+
+    </section>
+    <section class = "section0">
+        <div class="content0">
+            <div class="text0">
+                <p class ="resp">Ishant Education Consultancy is your trusted partner in shaping academic journeys and unlocking opportunities. With a commitment to excellence, we guide students towards their dream educational destinations, providing personalized assistance for admissions, scholarships. Our team of experienced consultants ensures a seamless transition to top-notch institutions worldwide. Let's embark on a transformative educational experience together!</p>
+            </div>
+            <div class="image0">
+                <img src="images/1s.png" alt="Image Description">
+            </div>
+        </div>
+        
+
+    </section>
+    <section class = "section1">
+        <div class="content1">
+            <div class="image0">
+                <img src="images/12.png" alt="Image Description">
+            </div>
+            <div class="text1">
+                <h1>OUR APPROACH</h1>
+                <p class ="approach">Ishant Education Consultancy is your trusted partner in shaping academic journeys and unlocking opportunities. With a commitment to excellence, we guide students towards their dream educational destinations, providing personalized assistance for admissions, scholarships. Our team of experienced consultants ensures a seamless transition to top-notch institutions worldwide. Let's embark on a transformative educational experience together!</p>
+            </div>
+            
+        </div>
+        
+
+    </section>
+
+    <section class="section2">
+        <section id="admission-process" class="admission-process sec-gap">
+            <div class="container-fluid">
+                <div class="col-xl-10 col-lg-11 mx-auto">
+                    <div class="row g-5">
+                        <div class="col-lg-5 pe-lg-5 wow fadeInLeft" data-wow-delay=".2s">
+                            <h2 class="section-title">Admission Process Simplified</h2>
+                            <p class="mb-5 pe-lg-5">
+                                <div id="text"></div>
+                                
+        
+                            </p>
+                            <a href="contact.html" class="primary-btn">Get Started Now</a>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="process wow fadeInRight" data-wow-delay=".4s">
+                                <div class="process-list">
+                                    <div class="number">1</div>
+                                    <div class="process-content">
+                                        <p class="process-title">SCIENTIFIC CAREER COUNSELLING</p>
+                                        <p class="m-0">Helps to manage student’s problem such as low concentration in study, Trust issue with parents.</p>
+                                    </div>
+                                </div>
+                                <div class="process-list">
+                                    <div class="number">2</div>
+                                    <div class="process-content">
+                                        <p class="process-title">APPLICATION & DOCUMENTATION</p>
+                                        <p class="m-0">Need to follow proper admission procedure as per college rules. Fill application form and submit required documents</p>
+                                    </div>
+                                </div>
+                                <div class="process-list">
+                                    <div class="number">3</div>
+                                    <div class="process-content">
+                                        <p class="process-title">ADMISSION GUIDANCE</p>
+                                        <!-- <p class="m-0">We offer admission guidance to students for various courses 
+                                            like courses, placements, fees and many more</p> -->
+                                            <p>Complete admission guidance for various courses including course fees, placement, hostel fees, education loan etc</p>
+                                    </div>
+                                </div>
+                                <div class="process-list">
+                                    <div class="number">4</div>
+                                    <div class="process-content">
+                                        <p class="process-title">GET ADMISSION</p>
+                                        <p class="m-0">We offer direct admission in top colleges or Universities through management quota. Get admission letter and education loan facility.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="whatsapp-icon">
+      <a href="https://api.whatsapp.com/send?phone=9241293092" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+      </a>
+    </div>
+    <footer id="rs-footer">
+      <div class="left-part">
+        <img src="images/logo1.jpg">
+      </div>
+      <div class="right-part">
+          <div class="contact">
+              <div class ='right-left-footer'>
+              <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Contact us</h1>
+              <div class="contact-con">
+                  <ul>
+                  <ul><p>Gola Road, Behind LIC office Ramgarh, Jharkhand</p></ul>
+                  <ul><p>info@ishantadmissions.in</p></ul>
+                  <ul><p>9241293092</p></ul>
+              </ul>
+              </div>
+          </div>
+          </div>
+          <div class = 'right-right-footer'>
+          <div class="Popular-Links">
+              <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Popular&#160;Links</h1>
+              <div class="contact-con">
+                  <ul>
+                    <ul><a href="about.html">About us</a></ul>
+                    <ul><a href="courses.html">Courses</a></ul>
+                    <ul><a href="contact.html">Contact</a></ul>
+              </ul>
+          </div>
+            
+          </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        function toggleMenu() {
+          const menu = document.querySelector('nav ul');
+          menu.classList.toggle('active');
+        }
+        $('#selectionInput').on('change', function() {
+  var selectedOption = $(this).find(':selected');
+  var url = selectedOption.data('href');
+  if (url !== undefined && url !== null) {
+      window.location.href = url;
+  }
+});
+      </script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Ishant Consultancy-A Key to Success</title>
+  <style>
+      body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: inherit;
+  display: block;
+  flex-wrap: wrap;
+}
+.header1 {
+    background-color: antiquewhite;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 0;
+    color: black;
+}
+
+a.email {
+    color: black;
+    font-size: 1.4vw; /* Using vw (viewport width) for font size */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a.email:hover {
+    color: #e1ad01;
+}
+
+.fas {
+    color: black;
+    font-style: italic;
+    font-weight: 900;
+}
+
+i.fas.fa-map-marker-alt {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4vw; /* Using vw (viewport width) for font size */
+}
+.header2 {
+  background-color: black;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: visible;
+  height: auto;
+  }
+
+/* Styles for the logo */
+.header2 img {
+  width:max-content;
+  max-width: 40%;
+  height: auto;
+  top: 0;
+}
+.full-width-image {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw; /* Sets the width of the image to span the entire viewport width */
+      z-index: -1; /* Places the image behind other header content */
+  }
+
+
+header.header2 li a{
+  color:#e1ad01;
+  text-decoration: none;
+}
+
+/* Styles for the navigation */
+/* General styles for the navigation */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  padding-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 25px; /* Adjust margin as needed */
+  font-size: 25px;
+  flex-wrap: wrap;
+  padding: 10px;
+  color: aliceblue;
+}
+
+/* Styles for the navigation links */
+.navlist li a:hover {
+  color: white;
+}
+.navlist{
+  color: aliceblue;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color:#e1ad01;
+    margin: 3px 0;
+    transition: transform 0.4s ease-in-out;
+  }
+@media (max-width: 800px) {
+    .menu-toggle {
+      display: flex;
+    }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: black;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    nav ul.active {
+      display: flex;
+    }
+    nav ul li {
+      margin: 10px 10px;
+    }
+  }
+
+/* Zoom effect on hover */
+.zoom-element {
+  transition: transform 0.3s;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.zoom-element:hover {
+  transform: scale(1.1);
+}
+
+.zoom-element li a{
+font-family:'Poppins', sans-serif;
+font-weight: 100;
+}
+/* Styles for links */
+a:-webkit-any-link {
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+main{
+  display: inline;
+  transition: smooth ;
+}
+
+.header2.fixed {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1000;
+}
+.navlist.active{
+      
+  
+}
+    .header3 {
+      background-color: #f0f0f0;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .top-section {
+      background-color: #e1ad01;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .top-section h1 {
+      margin: 0;
+    }
+
+    ul.navigation {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.navigation li {
+      display: inline;
+      margin-right: 20px; /* Adjust the spacing between list items */
+      position: relative;
+    }
+
+    ul.navigation li a {
+      text-decoration: none;
+      color: #333; /* Change the color as needed */
+    }
+
+    ul.navigation li::before {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #333; /* Line color */
+      transition: width 0.3s ease; /* Transition effect */
+    }
+
+    ul.navigation li:hover::before {
+      width: 100%;
+    }
+
+    section {
+      height: 500px; /* Adjust height as needed */
+      padding: 20px;
+      margin: 20px 0;
+      background-color: white;
+      font-family: poppins, sans-serif;
+    }
+    .introd{
+        height: auto;
+        font-size: 24px;
+  
+    }
+    .why-us{
+        height:auto;
+        font-size: 24px;
+        text-align: center;
+        
+    }
+    #Curriculum-section{
+        height: auto;
+        font-size: 24px;
+
+    }
+    #Duration-section{
+        height: auto;
+        font-size: 24px;
+    }
+    #Admission-section{
+        height: auto;
+        font-size: 24px;
+    }
+    #Benefits{
+        height: auto;
+        font-size: 24px;
+    }
+    #Scope{
+        height: auto;
+        font-size: 24px;
+    }
+    #Communication-and-Teamwork-Skills{
+        height: auto;
+        font-size: 24px;
+
+    }
+    section h2 {
+      display: inline-block;
+      position: relative;
+      font-size: 35px;
+      font-family: poppins, sans-serif;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60%; /* Adjust the line width */
+      height: 2px; /* Adjust the line height */
+      background-color: #e1ad01; /* Line color */
+      position: absolute;
+      bottom: -5px; /* Adjust the distance from the text */
+      left: 0;
+      height: 4px;
+    }
+    section h1{
+      display: inline-block;
+      position: relative;
+      font-size: 35px;
+      font-family: 'Times New Roman', Times, serif;
+
+    }
+    
+  .why-us-head {
+  border: 2px solid #e1ad01; /* Box border and color */
+  padding: 20px; /* Adjust padding around the content */
+  display: inline-block; /* Make the section an inline-block */
+  border-radius: 15px;
+  background-color: #e1ad01;
+
+}
+
+#rs-footer {
+  background-color: black;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: inherit;
+  max-width: inherit;
+  position: relative;
+  bottom: 0;
+  min-height: 80px; /* Adjust minimum height as needed */
+}
+.right-part{
+  display: flex;
+  align-content: space-evenly;
+}
+#p{
+  font-family: 'Poppins', sans-serif;
+}
+#rs-footer .left-part,
+#rs-footer .right-part {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#rs-footer img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin-right: 20px; /* Adjust spacing between image and content */
+}
+
+.contact {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column; /* Ensure contact details stack on smaller screens */
+}
+
+.contact-con {
+  color: aliceblue;
+  font-size: 16px; /* Adjust font size for better readability */
+}
+
+.contact-con ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-con ul li {
+  margin-bottom: 5px; /* Add spacing between contact details */
+  color: white;
+}
+.Popular-Links{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.right-left-footer{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.Popular-Links ul{
+  margin-top: 1.5px;
+}
+.Popular-Links ul a{
+
+  line-height: 2.5;
+  color: white;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+  #rs-footer .left-part,
+  #rs-footer .right-part {
+      flex: 1 1 100%;
+      text-align: center; /* Center align content on smaller screens */
+  }
+
+  #rs-footer img {
+      margin-right: 0; /* Remove margin for better mobile view */
+      margin-bottom: 10px; /* Add space below the image */
+  }
+
+  .contact {
+      text-align: center;
+  }
+}
+.whatsapp-icon {
+      position: fixed;
+      bottom: 50%; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 9999; /* Ensure it's above other elements if necessary */
+    }
+
+    .whatsapp-icon a img {
+      width: 50px; /* Adjust the size of the icon */
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header class ="header1">
+    <ul><a href="mailto:info@ishantadmissions.in" class="email">&#128231;  info@ishantadmissions.in  | </a>
+        <a href="#location"><i class="fas fa-map-marker-alt"> &nbsp; Gola Road, Behind LIC office Ramgarh, Jharkhand</i></a></ul>
+</header>
+
+<header class = "header2">
+    <img src="images/logo11.jpg" alt="Education Consultancy Logo">
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    <nav>
+        <ul class="navlist">
+            <div class="zoom-element">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </div>
+        </ul>
+</nav>
+</header>
+  <div class="top-section">
+    <h1>Bachelor of Science in Nursing </h1>
+  </div>
+
+  <header class="header3">
+    <ul class="navigation">
+      <li><a href="#Curriculum-section">Curriculum</a></li>
+      <li><a href="#Duration-section">Duration</a></li>
+      <li><a href="#Scope">Scope</a></li>
+      <li><a href="#Benefits">Benefits</a></li>
+      
+    </ul>
+  </header>
+  <section class="introd">
+    <p>A Bachelor of Science in Nursing (BSc Nursing) is an undergraduate academic degree program that prepares individuals for a career in nursing. The program is designed to provide students with the knowledge, skills, and clinical experiences necessary to become registered nurses (RNs) and deliver patient-centered care. Here are key aspects of pursuing a BSc Nursing:</p>   
+  </section>
+  <section class="why-us">
+    <div class="why-us-head">
+    <h1>Why choose Ishant for direct BSc Nursing admission?</h1>
+  </div>
+    <p>Ishant has continued to be a well-known name in the educational consulting industry, which offers a range of services relating to admission. The track record has been both reliable and worthwhile. Here are several reasons to use Ishant for direct BPharma admission.</p>
+    <ul>
+        <li><b>Knowledge about colleges and courses:</b> Ishant can only remain at the top by maintaining the reliability of frequent admittance to MQ admissions. When students visit us for such situations and have the required qualifications, they are thrilled to learn that their admission is on. We ensure that no student is left behind throughout any form of admission, including obtaining MQ seats.</li>
+        <li><b>Admission under the management quota is straightforward:</b> candidates should be able to enroll in any top business schools. Our strategy and helping students obtain seats at their colleges continue to be our primary priorities. We thoroughly verify every aspect of the admissions procedure, including payment and accurate verification. </li>
+        <li><b>Simple for international students:</b> Ishant also greatly advantages international students who travel to enroll in their favorite business school. Thanks to our remarkable assortment of college listings and prestigious colleges, we are a one-stop shop for all admissions. We have been successful in helping many students up to this point, and we will keep doing so in the future.</li>
+    </ul>
+  </section>
+
+  <section id="Curriculum-section">
+    <h2>Curriculum:</h2>
+    <ul>
+        <li>The curriculum of BSc Nursing programs covers a broad range of subjects related to nursing theory, clinical practice, and healthcare. Common topics include anatomy and physiology, pharmacology, medical-surgical nursing, pediatrics, obstetrics, psychiatric nursing, community health, nursing research, and leadership.</li>
+    </ul>
+    <h2>Specializations:</h2>
+    <ul>
+      <li>Some BSc Nursing programs offer specializations or elective courses in areas such as critical care nursing, pediatric nursing, psychiatric nursing, or community health nursing. These specializations allow students to tailor their education to specific areas of interest.</li>
+    </ul>
+    <h2>Clinical Practice:</h2>
+    <ul>
+        <li>Clinical practice is a significant component of BSc Nursing programs. Students undergo supervised clinical rotations in various healthcare settings, such as hospitals, clinics, community health centers, and long-term care facilities. Clinical experiences provide hands-on training and the opportunity to apply theoretical knowledge in real healthcare scenarios.</li>
+    </ul>
+    <h2>Patient Care Skills:</h2>
+    <ul>
+        <li>BSc Nursing programs emphasize the development of essential patient care skills. This includes learning to perform physical assessments, administer medications, provide wound care, assist in medical procedures, and collaborate with healthcare teams.</li>
+    </ul>
+  </section>
+
+  <section id="Duration-section">
+    <h2>Duration</h2>
+    <ul>
+      <li>The duration of BSc Nursing programs varies by country and educational institution. Typically, it is a four-year program, but in some regions, it might be a three-year program for individuals who already hold a relevant diploma or associate degree in nursing.</li>
+    </ul>
+</section>
+<section id="Scope">
+    <h2>Continuing Education:</h2>
+    <ul>
+    <li>Some nurses choose to pursue advanced degrees, such as a Master of Science in Nursing (MSN) or a Doctor of Nursing Practice (DNP), for specialization, leadership roles, or research opportunities.</li>
+  </ul>
+    <h2>Nursing Ethics and Professionalism:</h2>
+    <ul>
+      <li>BSc Nursing programs include coursework on nursing ethics, professional conduct, and legal aspects of nursing practice. Students learn about the ethical principles guiding healthcare decisions and the importance of maintaining professionalism in the nursing profession.</li>
+    </ul>
+  </section> 
+  <section id="Benefits">
+    <h2>Communication and Interpersonal Skills:</h2>
+    <ul>
+      <li>Effective communication and interpersonal skills are crucial for nurses. BSc Nursing programs focus on developing these skills to enhance patient communication, collaborate with healthcare teams, and interact with diverse patient populations.</li>
+    </ul>
+    <h2>Leadership and Management:</h2>
+    <ul>
+      <li>BSc Nursing programs often include courses on leadership and management in nursing. This prepares graduates for roles in nursing management, administration, and leadership positions within healthcare organizations.</li>
+    </ul>
+    
+    <h2>Evidence-Based Practice::</h2>
+    <ul>
+      <li>Nursing education emphasizes the importance of evidence-based practice. Students learn to critically evaluate research findings and incorporate evidence into their clinical decision-making.</li>
+    </ul>
+    <h2>Global Recognition:</h2>
+    <ul>
+        <li>BSc Nursing degrees are generally recognized internationally, allowing graduates to work in different countries and healthcare systems.</li>
+    </ul>
+    <p>Prospective BSc Nursing students should carefully research and choose a program that aligns with their career goals. Considerations should include the specific structure of the program, clinical opportunities, faculty expertise, and the reputation of the nursing school or university. Additionally, understanding the licensing or certification requirements in the region where one intends to practice is essential for a successful nursing career.</p>
+  </section>
+  <div class="whatsapp-icon">
+    <a href="https://api.whatsapp.com/send?phone=9241293092" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    </a>
+  </div>
+  <footer id="rs-footer">
+    <div class="left-part">
+      <img src="images/logo1.jpg">
+    </div>
+    <div class="right-part">
+        <div class="contact">
+            <div class ='right-left-footer'>
+            <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Contact us</h1>
+            <div class="contact-con">
+                <ul>
+                <ul><p>Gola Road, Behind LIC office Ramgarh, Jharkhand</p></ul>
+                <ul><p>info@ishantadmissions.in</p></ul>
+                <ul><p>9241293092</p></ul>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <div class = 'right-right-footer'>
+        <div class="Popular-Links">
+            <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Popular&#160;Links</h1>
+            <div class="contact-con">
+                <ul>
+                  <ul><a href="about.html">About us</a></ul>
+                  <ul><a href="courses.html">Courses</a></ul>
+                  <ul><a href="contact.html">Contact</a></ul>
+            </ul>
+        </div>
+          
+        </div>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+  <script>
+      function toggleMenu() {
+        const menu = document.querySelector('nav ul');
+        menu.classList.toggle('active');
+      }
+      $('#selectionInput').on('change', function() {
+var selectedOption = $(this).find(':selected');
+var url = selectedOption.data('href');
+if (url !== undefined && url !== null) {
+    window.location.href = url;
+}
+});
+    </script>
+</body>
+</html>

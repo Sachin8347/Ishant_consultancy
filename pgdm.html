@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* CSS Styles */
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: inherit;
+    display: block;
+    flex-wrap: wrap;
+}
+.header1 {
+    background-color: antiquewhite;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 0;
+    color: black;
+}
+
+a.email {
+    color: black;
+    font-size: 1.6vw; /* Using vw (viewport width) for font size */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a.email:hover {
+    color: #e1ad01;
+}
+
+.fas {
+    color: black;
+    font-style: italic;
+    font-weight: 900;
+}
+
+i.fas.fa-map-marker-alt {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6vw; /* Using vw (viewport width) for font size */
+}
+.header2 {
+    background-color: black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: visible;
+    height: auto;
+    }
+header.header2 li a{
+    color:#e1ad01;
+    text-decoration: none;
+}
+.header2 img {
+    width:max-content;
+    max-width: 40%;
+    height: auto;
+    top: 0;
+}
+.full-width-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw; /* Sets the width of the image to span the entire viewport width */
+        z-index: -1; /* Places the image behind other header content */
+    }
+
+/* Styles for the navigation */
+/* General styles for the navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    padding-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 25px; /* Adjust margin as needed */
+    font-size: 25px;
+    flex-wrap: wrap;
+    padding: 10px;
+    color: aliceblue;
+}
+
+/* Styles for the navigation links */
+.navlist li a:hover {
+    color: white;
+}
+.navlist{
+    color: aliceblue;
+}
+.menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color:#e1ad01;
+      margin: 3px 0;
+      transition: transform 0.4s ease-in-out;
+    }
+@media (max-width: 800px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 10px 10px;
+      }
+    }
+
+/* Zoom effect on hover */
+.zoom-element {
+    transition: transform 0.3s;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.zoom-element:hover {
+    transform: scale(1.1);
+}
+.zoom-element li a{
+  font-family:'Poppins', sans-serif;
+  font-weight: 300;
+}
+/* Styles for links */
+a:-webkit-any-link {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+main{
+    display: inline;
+    transition: smooth ;
+}
+
+.header2.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+    .header3 {
+      background-color: #f0f0f0;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .top-section {
+      background-color: #e1ad01;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .top-section h1 {
+      margin: 0;
+    }
+
+    ul.navigation {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.navigation li {
+      display: inline;
+      margin-right: 20px; /* Adjust the spacing between list items */
+      position: relative;
+    }
+
+    ul.navigation li a {
+      text-decoration: none;
+      color: #333; /* Change the color as needed */
+    }
+
+    ul.navigation li::before {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #333; /* Line color */
+      transition: width 0.3s ease; /* Transition effect */
+    }
+
+    ul.navigation li:hover::before {
+      width: 100%;
+    }
+
+    section {
+      height: 500px; /* Adjust height as needed */
+      padding: 20px;
+      margin: 20px 0;
+      background-color: white;
+      font-family: poppins, sans-serif;
+    }
+    .introd{
+        height: auto;
+        font-size: 24px;
+  
+    }
+    .why-us{
+        height:auto;
+        font-size: 24px;
+        text-align: center;
+        
+    }
+    #Curriculum-section{
+        height: auto;
+        font-size: 24px;
+
+    }
+    #Duration-section{
+        height: auto;
+        font-size: 24px;
+    }
+    #Admission-Requirements-section{
+        height: auto;
+        font-size: 24px;
+    }
+    #Benefits{
+        height: auto;
+        font-size: 24px;
+    }
+    #Scope{
+        height: auto;
+        font-size: 24px;
+    }
+    section h2 {
+      display: inline-block;
+      position: relative;
+      font-size: 35px;
+      font-family: poppins, sans-serif;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60%; /* Adjust the line width */
+      height: 2px; /* Adjust the line height */
+      background-color: #e1ad01; /* Line color */
+      position: absolute;
+      bottom: -5px; /* Adjust the distance from the text */
+      left: 0;
+      height: 4px;
+    }
+    section h1{
+      display: inline-block;
+      position: relative;
+      font-size: 35px;
+      font-family: 'Times New Roman', Times, serif;
+
+    }
+    
+  .why-us-head {
+  border: 2px solid #e1ad01; /* Box border and color */
+  padding: 20px; /* Adjust padding around the content */
+  display: inline-block; /* Make the section an inline-block */
+  border-radius: 15px;
+  background-color: #e1ad01;
+
+}#rs-footer {
+  background-color: black;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: inherit;
+  max-width: inherit;
+  position: relative;
+  bottom: 0;
+  min-height: 80px; /* Adjust minimum height as needed */
+}
+.right-part{
+  display: flex;
+  align-content: space-evenly;
+}
+#p{
+  font-family: 'Poppins', sans-serif;
+}
+#rs-footer .left-part,
+#rs-footer .right-part {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#rs-footer img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin-right: 20px; /* Adjust spacing between image and content */
+}
+
+.contact {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column; /* Ensure contact details stack on smaller screens */
+}
+
+.contact-con {
+  color: aliceblue;
+  font-size: 16px; /* Adjust font size for better readability */
+}
+
+.contact-con ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-con ul li {
+  margin-bottom: 5px; /* Add spacing between contact details */
+  color: white;
+}
+.Popular-Links{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.right-left-footer{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.Popular-Links ul{
+  margin-top: 1.5px;
+}
+.Popular-Links ul a{
+
+  line-height: 2.5;
+  color: white;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+  #rs-footer .left-part,
+  #rs-footer .right-part {
+      flex: 1 1 100%;
+      text-align: center; /* Center align content on smaller screens */
+  }
+
+  #rs-footer img {
+      margin-right: 0; /* Remove margin for better mobile view */
+      margin-bottom: 10px; /* Add space below the image */
+  }
+
+  .contact {
+      text-align: center;
+  }
+}
+.whatsapp-icon {
+      position: fixed;
+      bottom: 50%; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 9999; /* Ensure it's above other elements if necessary */
+    }
+
+    .whatsapp-icon a img {
+      width: 50px; /* Adjust the size of the icon */
+      height: auto;
+    }
+
+
+    
+  </style>
+</head>
+<body>
+  <header class ="header1">
+    <ul><a href="mailto:info@ishantadmissions.in" class="email">&#128231;  info@ishantadmissions.in  | </a>
+        <a href="#location"><i class="fas fa-map-marker-alt"> &nbsp; Gola Road, Behind LIC office Ramgarh, Jharkhand</i></a></ul>
+</header>
+
+<header class = "header2">
+    <img src="images/logo11.jpg" alt="Education Consultancy Logo">
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    <nav>
+        <ul class="navlist">
+            <div class="zoom-element">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </div>
+        </ul>
+</nav>
+</header>
+
+
+  <div class="top-section">
+    <h1>Post Graduate Diploma in Management</h1>
+  </div>
+
+  <header class="header3">
+    <ul class="navigation">
+      <li><a href="#Curriculum-section">Curriculum</a></li>
+      <li><a href="#Duration-section">Duration</a></li>
+      <li><a href="#Admission-Requirements-section">Admission Requirements</a></li>
+      <li><a href="#Benefits">Benefits</a></li>
+      <li><a href="#Scope">Scope</a></li>
+    </ul>
+  </header>
+  <section class="introd">
+    <p>PGDM stands for Post Graduate Diploma in Management. It is a postgraduate level program that focuses on providing students with a strong foundation in business and management skills. PGDM programs are offered by various business schools and management institutes, and they are designed to prepare students for leadership roles in the corporate world. Here are some key features and aspects of PGDM:</p>
+  </section>
+  <section class="why-us">
+    <div class="why-us-head">
+    <h1>Why choose Ishant for direct PGDM admission?</h1>
+  </div>
+    <p>Ishant is an established name in the industry of educational consultants that has reformed countless careers of students since 2007. Our established name and trust in the segment have allowed students to rely upon us for any concerns that relate to direct admission and related processes. <br>
+        Our strengths are well documented and we ensure no student falls back in the pack while searching for a relevant consultant to get direct admission. <br>
+        More so, here are the reasons why we are among the best names for any course you intend in colleges:
+        </p>
+    <ul>
+        <li><b>Resourceful approach:</b> Ishant makes sure to keep all resources in check while students can freely choose among the institutes they desire. This, in turn, helps them to know more about the courses offered and all the formalities required to admit them to their dream colleges. Thus, we truly care for all your admission queries and provide a one-stop solution to get enrolled with minimum hassle.</li>
+        <li><b>Direct admission: </b> With major institutions offering the well-acclaimed management quota, students need to know the exact way and eligibility to avail of one. Thus, Ishant comes to the rescue and helps every single student eyeing such admission without any issue. Management quota is instrumental for all those students, who miss out on admission narrowly due to various reasons. At Ishant, we offer the perfect guidelines and help with admission properly.</li>
+    </ul>
+  </section>
+
+  <section id="Curriculum-section">
+    <h2>Curriculum</h2>
+    <ul>
+        <li>The curriculum of PGDM programs typically covers core management subjects such as finance, marketing, human resources, operations, strategy, and business analytics.</li>
+        <li>The programs often include elective courses, allowing students to specialize in specific areas based on their career goals and interests.</li>
+    </ul>
+    <!-- Your content for the Home section -->
+  </section>
+
+  <section id="Duration-section">
+    <h2>Duration</h2>
+    <ul>
+        <li>PGDM programs usually have a duration of two years, similar to many MBA programs.</li>
+    </ul>
+    <!-- Your content for the About section -->
+  </section>
+
+  <section id="Admission-Requirements-section">
+    <h2>Admission Requirements:</h2>
+    <ul>
+        <li>Admission requirements vary by institution but generally include a bachelor's degree from a recognized university or equivalent.</li>
+        <li>Many institutes also require applicants to take entrance exams such as CAT (Common Admission Test), XAT (Xavier Aptitude Test), or GMAT (Graduate Management Admission Test).</li>
+        <li>Work experience may be preferred or required in some PGDM programs.</li>
+    </ul>
+    <!-- Your content for the Services section -->
+  </section>
+
+  <section id="Benefits">
+    <h2>Autonomy and Flexibility:</h2>
+    <ul>
+        <li>PGDM programs are often offered by autonomous institutions or business schools, allowing them greater flexibility in designing their curriculum and adapting to industry trends.</li>
+        <li>This autonomy can result in a curriculum that is more dynamic and responsive to the changing needs of the business environment.</li>
+    </ul>
+    <h2>Industry Orientation:</h2>
+    <ul>
+        <li>Admission requirements vary by institution but generally include a bachelor's degree from a recognized university or equivalent.</li>
+        <li>Many institutes also require applicants to take entrance exams such as CAT (Common Admission Test), XAT (Xavier Aptitude Test), or GMAT (Graduate Management Admission Test).</li>
+        <li>Work experience may be preferred or required in some PGDM programs.</li>
+     </ul>
+    
+</section>
+<section id="Scope">
+    <h2>Specializations:</h2>
+    <ul>
+        <li>PGDM programs often offer a range of specializations, such as finance, marketing, human resources, operations, information technology, and international business.</li>
+        <li>Students can choose a specialization based on their career aspirations and interests.</li>
+    </ul>
+    <h2>Career Opportunities</h2>
+    <ul>
+        <li>Graduates of PGDM programs are well-equipped for roles in various industries and functions, including consulting, finance, marketing, human resources, and operations.</li>
+    </ul>
+    <p>It's important for individuals considering a PGDM program to research and choose a reputable business school or institute. The reputation of the institution, faculty, industry connections, and the overall program structure should be carefully considered before making a decision.</p>
+    <!-- Your content for the Services section -->
+  </section>
+
+  <div class="whatsapp-icon">
+    <a href="https://api.whatsapp.com/send?phone=9241293092" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    </a>
+  </div>
+  <footer id="rs-footer">
+    <div class="left-part">
+      <img src="images/logo1.jpg">
+    </div>
+    <div class="right-part">
+        <div class="contact">
+            <div class ='right-left-footer'>
+            <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Contact us</h1>
+            <div class="contact-con">
+                <ul>
+                <ul><p>Gola Road, Behind LIC office Ramgarh, Jharkhand</p></ul>
+                <ul><p>info@ishantadmissions.in</p></ul>
+                <ul><p>9241293092</p></ul>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <div class = 'right-right-footer'>
+        <div class="Popular-Links">
+            <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Popular&#160;Links</h1>
+            <div class="contact-con">
+                <ul>
+                  <ul><a href="about.html">About us</a></ul>
+                  <ul><a href="courses.html">Courses</a></ul>
+                  <ul><a href="contact.html">Contact</a></ul>
+            </ul>
+        </div>
+          
+        </div>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+  <script>
+      function toggleMenu() {
+        const menu = document.querySelector('nav ul');
+        menu.classList.toggle('active');
+      }
+      $('#selectionInput').on('change', function() {
+var selectedOption = $(this).find(':selected');
+var url = selectedOption.data('href');
+if (url !== undefined && url !== null) {
+    window.location.href = url;
+}
+});
+    </script>
+</body>
+</html>
+
+

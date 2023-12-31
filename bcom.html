@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Ishant Consultancy-A Key to Success</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: inherit;
+    display: block;
+    flex-wrap: wrap;
+}
+.header1 {
+    background-color: antiquewhite;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 0;
+    color: black;
+}
+
+a.email {
+    color: black;
+    font-size: 1.4vw; /* Using vw (viewport width) for font size */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a.email:hover {
+    color: #e1ad01;
+}
+
+.fas {
+    color: black;
+    font-style: italic;
+    font-weight: 900;
+}
+
+i.fas.fa-map-marker-alt {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4vw; /* Using vw (viewport width) for font size */
+}
+.header2 {
+    background-color: black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: visible;
+    height: auto;
+    }
+
+/* Styles for the logo */
+.header2 img {
+    width:max-content;
+    max-width: 40%;
+    height: auto;
+    top: 0;
+}
+.full-width-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw; /* Sets the width of the image to span the entire viewport width */
+        z-index: -1; /* Places the image behind other header content */
+    }
+header.header2 li a{
+    color:#e1ad01;
+    text-decoration: none;
+}
+
+/* Styles for the navigation */
+/* General styles for the navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    padding-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 25px; /* Adjust margin as needed */
+    font-size: 25px;
+    flex-wrap: wrap;
+    padding: 10px;
+    color: aliceblue;
+}
+
+/* Styles for the navigation links */
+.navlist li a:hover {
+    color: white;
+}
+.navlist{
+    color: aliceblue;
+}
+.menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color:#e1ad01;
+      margin: 3px 0;
+      transition: transform 0.4s ease-in-out;
+    }
+@media (max-width: 800px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 10px 10px;
+      }
+    }
+
+/* Zoom effect on hover */
+.zoom-element {
+    transition: transform 0.3s;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.zoom-element:hover {
+    transform: scale(1.1);
+}
+
+.zoom-element li a{
+  font-family:'Poppins', sans-serif;
+  font-weight: 100;
+  }
+/* Styles for links */
+a:-webkit-any-link {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+main{
+    display: inline;
+    transition: smooth ;
+}
+
+.header2.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+    
+    /* CSS Styles */
+    .header3 {
+      background-color: #f0f0f0;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .top-section {
+      background-color: #e1ad01;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .top-section h1 {
+      margin: 0;
+    }
+
+    ul.navigation {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.navigation li {
+      display: inline;
+      margin-right: 20px; /* Adjust the spacing between list items */
+      position: relative;
+    }
+
+    ul.navigation li a {
+      text-decoration: none;
+      color: #333; /* Change the color as needed */
+    }
+
+    ul.navigation li::before {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #333; /* Line color */
+      transition: width 0.3s ease; /* Transition effect */
+    }
+
+    ul.navigation li:hover::before {
+      width: 100%;
+    }
+
+    section {
+      height: 500px; /* Adjust height as needed */
+      padding: 20px;
+      margin: 20px 0;
+      background-color: white;
+      font-family: poppins, sans-serif;
+    }
+    .introd{
+        height: auto;
+        font-size: 24px;
+  
+    }
+    .why-us{
+        height:auto;
+        font-size: 24px;
+        text-align: center;
+        
+    }
+    #Curriculum-section{
+        height: auto;
+        font-size: 24px;
+
+    }
+    #Duration-section{
+        height: auto;
+        font-size: 24px;
+    }
+    #Admission-Requirements-section{
+        height: auto;
+        font-size: 24px;
+    }
+    #Benefits{
+        height: auto;
+        font-size: 24px;
+    }
+    #Scope{
+        height: auto;
+        font-size: 24px;
+    }
+    #Communication-and-Teamwork-Skills{
+        height: auto;
+        font-size: 24px;
+
+    }
+    section h2 {
+      display: inline-block;
+      position: relative;
+      font-size: 35px;
+      font-family: poppins, sans-serif;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60%; /* Adjust the line width */
+      height: 2px; /* Adjust the line height */
+      background-color: #e1ad01; /* Line color */
+      position: absolute;
+      bottom: -5px; /* Adjust the distance from the text */
+      left: 0;
+      height: 4px;
+    }
+    section h1{
+      display: inline-block;
+      position: relative;
+      font-size: 35px;
+      font-family: 'Times New Roman', Times, serif;
+
+    }
+    
+  .why-us-head {
+  border: 2px solid #e1ad01; /* Box border and color */
+  padding: 20px; /* Adjust padding around the content */
+  display: inline-block; /* Make the section an inline-block */
+  border-radius: 15px;
+  background-color: #e1ad01;
+
+}
+#rs-footer {
+  background-color: black;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: inherit;
+  max-width: inherit;
+  position: relative;
+  bottom: 0;
+  min-height: 80px; /* Adjust minimum height as needed */
+}
+.right-part{
+  display: flex;
+  align-content: space-evenly;
+}
+#p{
+  font-family: 'Poppins', sans-serif;
+}
+#rs-footer .left-part,
+#rs-footer .right-part {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#rs-footer img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin-right: 20px; /* Adjust spacing between image and content */
+}
+
+.contact {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column; /* Ensure contact details stack on smaller screens */
+}
+
+.contact-con {
+  color: aliceblue;
+  font-size: 16px; /* Adjust font size for better readability */
+}
+
+.contact-con ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-con ul li {
+  margin-bottom: 5px; /* Add spacing between contact details */
+  color: white;
+}
+.Popular-Links{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.right-left-footer{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.Popular-Links ul{
+  margin-top: 1.5px;
+}
+.Popular-Links ul a{
+
+  line-height: 2.5;
+  color: white;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+  #rs-footer .left-part,
+  #rs-footer .right-part {
+      flex: 1 1 100%;
+      text-align: center; /* Center align content on smaller screens */
+  }
+
+  #rs-footer img {
+      margin-right: 0; /* Remove margin for better mobile view */
+      margin-bottom: 10px; /* Add space below the image */
+  }
+
+  .contact {
+      text-align: center;
+  }
+}
+.whatsapp-icon {
+      position: fixed;
+      bottom: 50%; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 9999; /* Ensure it's above other elements if necessary */
+    }
+
+    .whatsapp-icon a img {
+      width: 50px; /* Adjust the size of the icon */
+      height: auto;
+    }
+    
+  </style>
+</head>
+<body>
+  <header class ="header1">
+  <ul><a href="mailto:info@ishantadmissions.in" class="email">&#128231;  info@ishantadmissions.in  | </a>
+      <a href="#location"><i class="fas fa-map-marker-alt"> &nbsp; Gola Road, Behind LIC office Ramgarh, Jharkhand</i></a></ul>
+</header>
+
+<header class = "header2">
+  <img src="images/logo11.jpg" alt="Education Consultancy Logo">
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  <nav>
+      <ul class="navlist">
+          <div class="zoom-element">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          </div>
+      </ul>
+</nav>
+</header>
+
+  <div class="top-section">
+    <h1>Bachelor of Commerce</h1>
+  </div>
+
+  <header class="header3">
+    <ul class="navigation">
+      <li><a href="#Curriculum-section">Curriculum</a></li>
+      <li><a href="#Duration-section">Duration</a></li>
+      <li><a href="#Scope">Scope</a></li>
+      <li><a href="#Benefits">Benefits</a></li>
+      
+    </ul>
+  </header>
+  <section class="introd">
+    <p>A Bachelor of Commerce (BCom) is an undergraduate degree program that focuses on commerce and business-related subjects. The program typically spans three to four years, and it is designed to provide students with a broad understanding of business principles, economics, accounting, finance, marketing, and management.</p><br>
+    
+        
+  </section>
+  <section class="why-us">
+    <div class="why-us-head">
+    <h1>Why choose Ishant for direct B.Com admission?</h1>
+  </div>
+    <p>Ishant has remained a renowned name in the educational consulting world, where they have been providing various services related to admission since 2007. The track record has been consistent and valuable at the same time. Here is why you should go to Ishant for direct B.Com admission:</p>
+    <ul>
+        <li><b>Understanding of colleges and courses to the point: </b> : Ishant can only remain at the top by maintaining the reliability of frequent admittance to MQ admissions. When students visit us for such situations and have the required qualifications, they are thrilled to learn that their admission is on. We ensure that no student is left behind throughout any form of admission, including obtaining MQ seats. </li>
+        <li><b>Direct admission facilitated:  </b>candidates should be able to enroll in any top business schools. Our strategy and helping students obtain seats at their colleges continue to be our primary priorities. We thoroughly verify every aspect of the admissions procedure, including payment and accurate verification. </li>
+        <li><b>Convenient for overseas students: </b> Ishant also greatly advantages international students who travel to enroll in their favorite business school. Thanks to our remarkable assortment of college listings and prestigious colleges, we are a one-stop shop for all admissions. We have been successful in helping many students up to this point, and we will keep doing so in the future.</li>
+    </ul>
+  </section>
+
+  <section id="Curriculum-section">
+    <h2>Core Subjects:</h2>
+    <ul>
+      <li><b>Accounting:</b> This involves the study of financial transactions, recording, and reporting.</li>
+      <li><b>Finance:</b> Focuses on the management of money, investments, and financial planning.</li>
+      <li><b>Economics: </b> the production, distribution, and consumption of goods and services.</li>
+      <li><b>Marketing: </b> the study of product promotion, advertising, and consumer behavior.</li>
+      <li><b>Management:</b> Covers organizational structure, leadership, and business strategy.</li>
+    </ul>
+    <h2>	Electives and Specializations:</h2>
+
+    <ul>
+      <li>Many BCom programs offer elective courses or specializations in areas like international business, entrepreneurship, human resources, information systems, or supply chain management.</li>
+      
+    </ul>
+    <h2>Pratical Experience:</h2>
+    <ul>
+      <li>Some BCom programs may include internships, projects, or case studies to provide students with practical, real-world experience.</li>
+    </ul>
+    <!-- Your content for the Home section -->
+  </section>
+
+  <section id="Duration-section">
+    <h2>Duration</h2>
+    <ul>
+      <li>The duration of a BCom program can vary by country and university, but it typically takes three to four years to complete.</li>
+    </ul>
+</section>
+    
+  </section>
+
+  
+
+  <section id="Scope">
+    <h2>Career opportunities</h2>
+    <ul>
+    <li>Graduates with a BCom degree may pursue careers in various fields, including finance, banking, accounting, marketing, human resources, and general management.</li>
+  </ul>
+    <h2>Further Education:</h2>
+    <ul>
+      <li>Many students choose to pursue further education, such as a Master of Commerce (MCom) or other specialized master's degrees, after completing their BCom.</li>
+    </ul>
+    <!-- Your content for the Contact section -->
+    
+  </section> 
+  <section id="Benefits">
+    <h2>	Professional Certifications:</h2>
+    <ul>
+      <li>Some students may choose to pursue professional certifications, such as Chartered Accountant (CA), Certified Public Accountant (CPA), or Chartered Financial Analyst (CFA), to enhance their career prospects.</li>
+    </ul>
+    <h2>	Global Recognition:</h2>
+    <ul>
+      <li>BCom degrees are recognized globally, and graduates often find opportunities to work internationally.</li>
+    </ul>
+    <p>It's important to note that the specific curriculum and structure of BCom programs can vary among universities. Students interested in pursuing a BCom should carefully review the program offerings of different institutions to find the one that aligns with their interests and career goals.</p>
+  </section>
+  <div class="whatsapp-icon">
+    <a href="https://api.whatsapp.com/send?phone=9241293092" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    </a>
+  </div>
+  <footer id="rs-footer">
+    <div class="left-part">
+      <img src="images/logo1.jpg">
+    </div>
+    <div class="right-part">
+        <div class="contact">
+            <div class ='right-left-footer'>
+            <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Contact us</h1>
+            <div class="contact-con">
+                <ul>
+                <ul><p>Gola Road, Behind LIC office Ramgarh, Jharkhand</p></ul>
+                <ul><p>info@ishantadmissions.in</p></ul>
+                <ul><p>9241293092</p></ul>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <div class = 'right-right-footer'>
+        <div class="Popular-Links">
+            <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Popular&#160;Links</h1>
+            <div class="contact-con">
+                <ul>
+                  <ul><a href="about.html">About us</a></ul>
+                  <ul><a href="courses.html">Courses</a></ul>
+                  <ul><a href="contact.html">Contact</a></ul>
+            </ul>
+        </div>
+          
+        </div>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+  <script>
+      function toggleMenu() {
+        const menu = document.querySelector('nav ul');
+        menu.classList.toggle('active');
+      }
+      $('#selectionInput').on('change', function() {
+var selectedOption = $(this).find(':selected');
+var url = selectedOption.data('href');
+if (url !== undefined && url !== null) {
+    window.location.href = url;
+}
+});
+    </script>
+</body>
+</html>

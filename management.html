@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('#header').load('header.html');
+        })
+    </script>
+    <style>
+         body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: inherit;
+    display: block;
+    flex-wrap: wrap;
+}
+.header1 {
+    background-color: antiquewhite;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 0;
+    color: black;
+}
+
+a.email {
+    color: black;
+    font-size: 1.5vw; /* Using vw (viewport width) for font size */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a.email:hover {
+    color: #e1ad01;
+}
+
+.fas {
+    color: black;
+    font-style: italic;
+    font-weight: 900;
+}
+
+i.fas.fa-map-marker-alt {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5vw; /* Using vw (viewport width) for font size */
+}
+.header2 {
+    background-color: black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: visible;
+    height: auto;
+    }
+header.header2 li a{
+    color:#e1ad01;
+    text-decoration: none;
+}
+.header2 img {
+    width:max-content;
+    max-width: 40%;
+    height: auto;
+    top: 0;
+}
+.full-width-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw; /* Sets the width of the image to span the entire viewport width */
+        z-index: -1; /* Places the image behind other header content */
+    }
+
+/* Styles for the navigation */
+/* General styles for the navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    padding-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 25px; /* Adjust margin as needed */
+    font-size: 25px;
+    flex-wrap: wrap;
+    padding: 10px;
+    color: aliceblue;
+}
+
+/* Styles for the navigation links */
+.navlist li a:hover {
+    color: white;
+}
+.navlist{
+    color: aliceblue;
+}
+.menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color:#e1ad01;
+      margin: 3px 0;
+      transition: transform 0.4s ease-in-out;
+    }
+@media (max-width: 800px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 10px 10px;
+      }
+    }
+
+/* Zoom effect on hover */
+.zoom-element {
+    transition: transform 0.3s;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.zoom-element:hover {
+    transform: scale(1.1);
+}
+.zoom-element li a{
+  font-family:'Poppins', sans-serif;
+  font-weight: 300;
+}
+/* Styles for links */
+a:-webkit-any-link {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+main{
+    display: inline;
+    transition: smooth ;
+}
+
+.header2.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+        .container {
+            display: flex;
+            margin:10px;
+        }
+        .table-container {
+            width: 60%;
+            padding-right: 20px; /* Add space between table and contact box */
+        }
+        .contact-box {
+            width: 40%;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #ccc;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        th:first-child,
+        td:first-child {
+            border-right: none;
+        }
+        th:last-child,
+        td:last-child {
+            border-left: none;
+        }
+        .form-control {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Styles for form textarea */
+    textarea.form-control {
+      resize: vertical;
+    }
+    .form-container {
+      padding: 20px;
+      background-color: #e1ad01;
+      border-radius: 8px;
+      width: 40%;
+         }
+         .hd {
+      position: relative;
+      display: inline-block;
+    }
+         .hd::after {
+      content: "";
+      position: absolute;
+      bottom: -5px; /* Adjust this value to change the distance between the header and the line */
+      left: 0;
+      width: 92px; /* Adjust this value to change the length of the line */
+      height: 6px; /* Adjust this value to change the thickness of the line */
+      background-color: #e1ad01 /* Change this to the color you prefer */
+    
+    }
+    button{
+        background-color: #e1ad01;
+        border-radius: 15px;
+        border-color: #e1ad01;
+        transition: transform 0.3s ease;
+    }
+    button:hover {
+            transform: scale(1.1); /* Scale the box on hover */
+        }
+    .primary-btn.w-100.mt-4{
+        background-color: black;
+        color: white;
+    }
+    #rs-footer {
+  background-color: black;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: inherit;
+  max-width: inherit;
+  position: relative;
+  bottom: 0;
+  min-height: 80px; /* Adjust minimum height as needed */
+}
+.right-part{
+  display: flex;
+  align-content: space-evenly;
+}
+#p{
+  font-family: 'Poppins', sans-serif;
+}
+#rs-footer .left-part,
+#rs-footer .right-part {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#rs-footer img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin-right: 20px; /* Adjust spacing between image and content */
+}
+
+.contact {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column; /* Ensure contact details stack on smaller screens */
+}
+
+.contact-con {
+  color: aliceblue;
+  font-size: 16px; /* Adjust font size for better readability */
+}
+
+.contact-con ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-con ul li {
+  margin-bottom: 5px; /* Add spacing between contact details */
+  color: white;
+}
+.Popular-Links{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.right-left-footer{
+  margin-top: 35px;
+  line-height: 1.5;
+}
+.Popular-Links ul{
+  margin-top: 1.5px;
+}
+.Popular-Links ul a{
+
+  line-height: 2.5;
+  color: white;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+  #rs-footer .left-part,
+  #rs-footer .right-part {
+      flex: 1 1 100%;
+      text-align: center; /* Center align content on smaller screens */
+  }
+
+  #rs-footer img {
+      margin-right: 0; /* Remove margin for better mobile view */
+      margin-bottom: 10px; /* Add space below the image */
+  }
+
+  .contact {
+      text-align: center;
+  }
+}
+.whatsapp-icon {
+      position: fixed;
+      bottom: 50%; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 9999; /* Ensure it's above other elements if necessary */
+    }
+
+    .whatsapp-icon a img {
+      width: 50px; /* Adjust the size of the icon */
+      height: auto;
+    }
+    </style>
+</head>
+<body> 
+  <header class ="header1">
+    <ul><a href="mailto:info@ishantadmissions.in" class="email">&#128231;  info@ishantadmissions.in  | </a>
+        <a href="#location"><i class="fas fa-map-marker-alt"> &nbsp; Gola Road, Behind LIC office Ramgarh, Jharkhand</i></a></ul>
+</header>
+
+<header class = "header2">
+    <img src="images/logo11.jpg" alt="Education Consultancy Logo">
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    <nav>
+        <ul class="navlist">
+            <div class="zoom-element">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </div>
+        </ul>
+</nav>
+</header>
+
+<div class="container">
+    <div class="table-container">
+        <h1 class ="hd">MANAGEMENT</h1>
+        <table border="1">
+            <colgroup>
+                <col style="width: 70%;">
+                <col style="width: 30%;">
+            </colgroup>
+            <tr>
+                <td>MBA</td>
+                <td><a href="mba.html"><button>Know more</button></a></td>
+            </tr>
+            <tr>
+                <td>MHA</td>
+                <td><a href="mha.html"><button>Know more</button></a></td>
+            </tr>
+            <tr>
+                <td>BBA</td>
+                <td><a href="bba.html"><button>Know more</button></a></td>
+            </tr>
+            <tr>
+                <td>PGDM</td>
+                <td><a href="pgdm.html"><button>Know more</button></a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-container">
+        <h1 class="section-title text-start mb-3">Get in Touch</h1>
+        <div class="divider-orange"></div>
+        <p>
+          Have a question? Need Some Help? <br>
+          We would love to hear from you..
+        </p>
+        <form class="info-form" action="" name="response" id="response" method="post" >
+          <input type="text" class="form-control" placeholder="Name*" name= "name" id="name">
+          <input type="text" class="form-control" placeholder="Email Id*" name="email" id="email">
+          <input type="text" class="form-control" placeholder="Phone No*" name="phone" id ="phone">
+          <textarea name="" cols="30" rows="6" class="form-control h-auto mb-3" name="message"placeholder="Message..." id="message"></textarea>
+          <button type="submit" class="primary-btn w-100 mt-4">Submit</button>
+        </form>
+      </div>
+</div>
+<div class="whatsapp-icon">
+    <a href="https://api.whatsapp.com/send?phone=9241293092" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    </a>
+  </div>
+  <footer id="rs-footer">
+    <div class="left-part">
+      <img src="images/logo1.jpg">
+    </div>
+    <div class="right-part">
+        <div class="contact">
+            <div class ='right-left-footer'>
+            <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Contact us</h1>
+            <div class="contact-con">
+                <ul>
+                <ul><p>Gola Road, Behind LIC office Ramgarh, Jharkhand</p></ul>
+                <ul><p>info@ishantadmissions.in</p></ul>
+                <ul><p>9241293092</p></ul>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <div class = 'right-right-footer'>
+        <div class="Popular-Links">
+            <h1 style="color:white; border-bottom: 2px solid yellow; display: inline-block; color: white;">Popular&#160;Links</h1>
+            <div class="contact-con">
+                <ul>
+                  <ul><a href="about.html">About us</a></ul>
+                  <ul><a href="courses.html">Courses</a></ul>
+                  <ul><a href="contact.html">Contact</a></ul>
+            </ul>
+        </div>
+          
+        </div>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+  <script>
+      function toggleMenu() {
+        const menu = document.querySelector('nav ul');
+        menu.classList.toggle('active');
+      }
+      $('#selectionInput').on('change', function() {
+var selectedOption = $(this).find(':selected');
+var url = selectedOption.data('href');
+if (url !== undefined && url !== null) {
+    window.location.href = url;
+}
+});
+    </script>
+    <script>
+
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbxQRbpLN-uJv5-MyqqtJN6o9k5C5omAJnWPI_pu4JAcikj3CjJrXBaM7XnoZ_De31FhIw/exec'
+			const form = document.forms['response']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
+		  </script>
+</body>
+</html>
+
